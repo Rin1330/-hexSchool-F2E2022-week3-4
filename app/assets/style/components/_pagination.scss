@@ -1,0 +1,28 @@
+.pagination {
+  border: 1px solid #555555;
+  display: inline-flex;
+  margin-bottom: 5rem;
+  @include mobile {
+    margin: 1.5rem 0 4rem;
+  }
+  li {
+    border-right: 1px solid #555555;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  a {
+    display: block;
+    font-size: 1.125rem;
+    padding: 0.65rem 1rem;
+    color: $dark-color;
+    transition: all .3s ease 0s;
+    @include mobile {
+      font-size: 1rem;
+    }
+    &:hover {
+      background-color: $dark-color;
+      color: $normal-color;
+    }
+  }
+}

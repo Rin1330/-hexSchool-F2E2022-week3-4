@@ -1,0 +1,389 @@
+.tabMenu {
+  li {
+    width: calc(99.99% / 3);
+    border-left: 1px solid #DCDCDC;
+    border-right: 1px solid #DCDCDC;
+  }
+  a {
+    color: $dark-color;
+    font-size: 2rem;
+    padding: 1.5rem 0.25rem;
+    position: relative;
+    @include ipad {
+      font-size: 1.5rem;
+      padding: 1rem 0.25rem;
+    }
+    @include mobile {
+      font-size: 1rem;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 8px;
+      bottom: 0;
+      left: 0;
+      background-color: $primary-color;
+      transition: width .3s ease 0s;
+    }
+    &.active,
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.sectionBanner {
+  margin-bottom: 5rem;
+  @include mobile {
+    margin-bottom: 2.5rem;
+  }
+  .banner {
+    min-height: 296px;
+    width: 50%;
+    transition: all .3s ease 0s;
+    @include mobile {
+      min-height: 136px;
+    }
+    
+  }
+  &.tab-1{
+    .banner1 {
+      @include backgroundImage ('../images/product-header-1.png', cover);
+      @include ipad {
+        @include backgroundImage ('../images/product-header-sm-1.png', cover);
+      }
+    }
+    .banner2 {
+      @include backgroundImage ('../images/product-header-2.png', cover);
+      @include ipad {
+        @include backgroundImage ('../images/product-header-sm-2.png', cover);
+      }
+    }
+  }
+  &.tab-2{
+    .banner1 {
+      @include backgroundImage ('../images/product-header-3.png', cover);
+      @include ipad {
+        @include backgroundImage ('../images/product-header-sm-3.png', cover);
+      }
+    }
+    .banner2 {
+      @include backgroundImage ('../images/product-header-4.png', cover);
+      @include ipad {
+        @include backgroundImage ('../images/product-header-sm-4.png', cover);
+      }
+    }
+  }
+}
+
+.pageTitle {
+  font-size: 2.625rem;
+  font-weight: 500;
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+.pageIntro {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  @include mobile {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.tabContent {
+  display: none;
+  opacity: 0;
+  transition: all .5s ease 0s;
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.col-4 {
+  width: calc(100% + 24px);
+  @include mobile {
+    width: 100%;
+  }
+  & > * {
+    margin-right: 24px;
+    width: calc((100% - 96px) / 4);
+    @include ipad {
+      width: calc((100% - 48px) / 2);
+    }
+    @include mobile {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+.col-3 {
+  width: calc(100% + 24px);
+  @include mobile {
+    width: 100%;
+  }
+  & > * {
+    margin-right: 24px;
+    width: calc((100% - 72px) / 3);
+    @include ipad {
+      width: calc((100% - 48px) / 2);
+    }
+    @include mobile {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+.locationItem {
+  display: flex;
+  flex-direction: column;
+  .locationHeader {
+    img {
+      transition: all .3s ease 0s;
+    }
+  }
+  .locationBody > *{
+    border: 1px solid #00000020;
+  }
+  span {
+    font-size: 1.5rem;
+  }
+  .more {
+    color: $normal-color;
+    background-color: $dark-color;
+    font-size: 1.188rem;
+    line-height: 1.421;
+    padding: 1rem;
+    transition: all .3s ease 0s;
+  }
+  &:hover {
+    img {
+      transform: scale(1.15);
+    }
+    .more {
+      background-color: rgba($color: #333, $alpha: .85);
+    }
+  }
+}
+
+.locationDetails { 
+  &>div:first-child {
+    flex: 1;
+    .locationHeader {
+      max-width: 526px;
+      min-height: 224px;
+      @include backgroundImage ('/assets/images/storepage-1.png', cover);
+      @include ipad {
+        flex: 1;
+        margin-right: 1.5rem;
+      }
+      @include mobile {
+        flex: 0 1 100%;
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+    .locationBody {
+      @include ipad {
+        max-width: 337px;
+      }
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+    @include ipad {
+      flex-direction: row;
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  &>div:last-child {
+    width: 58.6%;
+    @include ipad {
+      width: 100%;
+    }
+  }
+  @include ipad {
+    flex-direction: column;
+  }
+}
+
+.blogItem {
+  margin-bottom: 3.75rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include ipad {
+    margin-bottom: 1.5rem;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+  &>div:first-child {
+    flex: 1;
+    @include ipad {
+      flex: auto;
+      max-width: 336px;
+      width: 100%;
+    }
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: .5rem;
+      max-width: 100%;
+    }
+  }
+  &>div:last-child {
+    max-width: 636px;
+    @include ipad {
+      max-width: 100%;
+      flex: 1;
+    }
+  }
+  .blogHead {
+    margin-bottom: .25rem;
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+  .blogHeadTitle {
+    font-size: 2rem;
+    @include ipad {
+      font-size: 1.5rem;
+    }
+  }
+  .blogBody {
+    color: #555555;
+    @include mobile {
+      display: none;
+    }
+  }
+  .lg{
+    @include ipad {
+      font-size: 1rem;
+    }
+  }
+  a:hover {
+    color: $primary-color;
+  }
+}
+
+.searchBar{
+  background-color: $secondary-color;
+  li {
+    margin-right: 3rem;
+    a {
+      display: block;
+      padding: 13px 0;
+    }
+  }
+  .search {
+    width: 40px;
+    height: 40px;
+    span {
+      font-size: 1.875rem;
+      transition: all .3s ease 0s;
+    }
+    &:hover {
+      span {
+        color: $link-hover-color;
+      }
+    }
+  }
+}
+
+.breadcrumb li{
+  position: relative;
+  margin-right: 1rem;
+  &:before {
+    content:'/';
+    position: absolute;
+    top: 0;
+    right: -12px;
+  }
+  &:last-child:before {
+      content: none;
+    }
+  a {
+    display: block;
+    color: $dark-color;
+    &.active {
+      color: $primary-color;
+    }
+  }
+}
+
+.blogDetails {
+  max-width: 856px;
+  width: 100%;
+  transition: all .3s ease 0s;
+  @include ipad {
+    max-width: 516px;
+  }
+  @include mobile {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.shareLink {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $success-color;
+  @include mobile {
+    display: none;
+  }
+  a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
+
+.aside {
+  @include mobile {
+    display: none;
+  }
+  .tagRow {
+    span {
+      display: inline-block;
+      color: $primary-color;
+      font-size: 1.5rem;
+      font-weight: 700;
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: .25rem;
+    }
+    &:first-child {
+      span {
+        font-size: 2rem;
+        &:not(:last-child) {
+          margin-right: .75rem;
+        }
+      }
+    }
+  }
+}
+
+.bottom_nav {
+  @include mobile {
+    display: none;
+  }
+}

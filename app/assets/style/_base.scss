@@ -1,0 +1,98 @@
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+
+*{
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: $normal-color;
+  transition: all .3s ease 0s;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  line-height: 0;
+}
+
+section {
+  padding: 5rem 0 3.5rem;
+  @include mobile {
+    padding: 2.5rem 0 1rem;
+  }
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.lg {
+  font-size: 1.25rem;
+}
+
+.xl {
+  font-size: 2.250rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  position: relative;
+  @include mobile {
+    font-size: 1.5rem;
+  }
+  &.leftLine {
+    padding-left: 1rem;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 7px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $primary-color;
+    }
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+}
+
+select {
+  border: 1px solid #CED4DA;
+  padding: 6px 12px;
+  min-width: 304px;
+  color: #495057;
+  font-size: 1.125rem;
+  line-height: 1.444;
+}
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
