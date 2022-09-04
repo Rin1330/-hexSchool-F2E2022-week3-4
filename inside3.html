@@ -1,10 +1,30 @@
----
-title: 部落格
-layout: ./app/layout.ejs
-engine: ejs
-current: inside3
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>部落格</title>
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container d-flex justify-content-space-between align-items-center">
+      <div class="logo"><a href="./index.html"><img src="./assets/images/logo-white.png" alt="logo"></a></div>
+      <ul class="nav">
+        <li class="mr-8"><a href="./inside1.html">系列鏡框</a></li>
+        <li class="mr-8"><a href="./inside2.html">門市據點</a></li>
+        <li class="mr-8"><a href="./inside3.html">部落格</a></li>
+        <li><a href="./qna.html">常見問題</a></li>
+      </ul>
+      <a href="javascript:;" class="mobileMenu"><span>Mobile Menu</span></a>
+    </div>
+  </header>
+
+  
 
   <div class="container">
     <h2 class="leftLine mb-4 mt-12 fw-bold">部落格</h2>  
@@ -122,3 +142,43 @@ current: inside3
       </ul>
     </div>
   </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footerUpper d-flex justify-content-space-between">
+        <div>
+          <ul class="nav d-flex">
+            <li class="mr-6"><a href="./index.html">首頁</a></li>
+            <li class="mr-6"><a href="./inside1.html">系列鏡框</a></li>
+            <li class="mr-6"><a href="./inside2.html">門市據點</a></li>
+            <li class="mr-6"><a href="./inside3.html">部落格</a></li>
+            <li><a href="./qna.html">常見問題</a></li>
+          </ul>
+          <ul class="contactInfo">
+            <li class="mb-1"><a href="javascript:;" class="align-items-center"><span class="material-symbols-outlined">call</span>0800-000-000</a></li>
+            <li><a href="javascript:;" class="align-items-center"><span class="material-symbols-outlined">mail</span>glasses@business.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="socailLink d-flex">
+            <li><a href="javascript:;"><img src="./assets/images/ic_social_fb.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./assets/images/ic_social_ig.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="./assets/images/ic_social_line.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footerLower d-flex justify-content-space-between">
+        <p class="small">Copyright © 2020 Glasses.All rights reserved.</p>
+        <ul class="d-flex">
+          <li><a href="javascript:;">隱私權政策</a></li>
+          <li><a href="javascript:;">服務條款</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
