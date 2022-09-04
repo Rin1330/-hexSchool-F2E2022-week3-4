@@ -1,17 +1,35 @@
-const mobileBtn = document.querySelector('.mobileMenu')
-const headerNav = document.querySelector('.header .nav')
+const mobileBtn = document.querySelector('.mobileMenu');
+const headerNav = document.querySelector('.header .nav');
+const body = document.querySelector('body');
+const layout = document.createElement('div');
+const _layout = document.querySelector('.layout');
+let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
 mobileBtn.addEventListener('click', () => {
-  mobileBtn.classList.toggle('active')
-  headerNav.classList.toggle('active')
+  mobileBtn.classList.toggle('active');
+  headerNav.classList.toggle('active');
+  if(mobileBtn.classList.contains('active')){
+    layout.classList.add('layout');
+    body.appendChild(layout);
+    // body.style.overflowY = 'hidden';
+  } else {
+    body.removeChild(layout);
+    // body.style.overflowY = 'auto';
+  }
 })
 
-
+// 
 
 // jQuery with CDN
 $(document).ready(() => {
   if ($('.tabMenu a').length > 0) {
     initTabMenu()
+  }
+
+  if($('.header nav').hasClass('active')){
+    $('.footer').append('<div class="layout"></div>');
+  } else {
+    $('layout').remove();
   }
 })
 
