@@ -2,8 +2,6 @@ const mobileBtn = document.querySelector('.mobileMenu');
 const headerNav = document.querySelector('.header .nav');
 const body = document.querySelector('body');
 const layout = document.createElement('div');
-const _layout = document.querySelector('.layout');
-let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
 mobileBtn.addEventListener('click', () => {
   mobileBtn.classList.toggle('active');
