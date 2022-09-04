@@ -4,10 +4,6 @@ var mobileBtn = document.querySelector('.mobileMenu');
 var headerNav = document.querySelector('.header .nav');
 var body = document.querySelector('body');
 var layout = document.createElement('div');
-
-var _layout = document.querySelector('.layout');
-
-var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 mobileBtn.addEventListener('click', function () {
   mobileBtn.classList.toggle('active');
   headerNav.classList.toggle('active');
