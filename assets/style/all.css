@@ -744,7 +744,8 @@ select {
 
 .header {
   position: relative;
-  background-color: #AA0601; }
+  background-color: #AA0601;
+  z-index: 9999; }
   .header .logo {
     width: 80px;
     margin: 1rem 0; }
@@ -956,6 +957,19 @@ select {
       @media (max-width: 767.98px) {
         .footer .footerLower ul li a {
           font-size: 1rem; } }
+
+.layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 9990; }
+  @media (min-width: 768px) {
+    .layout {
+      display: none; } }
 
 .banner {
   min-height: 787px;
