@@ -1,0 +1,108 @@
+.tabMenu {
+  li {
+    width: calc(99.99% / 3);
+    border-left: 1px solid #DCDCDC;
+    border-right: 1px solid #DCDCDC;
+  }
+  a {
+    color: $dark-color;
+    font-size: 2rem;
+    padding: 1.5rem 0.25rem;
+    position: relative;
+    @include ipad {
+      font-size: 1.5rem;
+      padding: 1rem 0.25rem;
+    }
+    @include mobile {
+      font-size: 1rem;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 8px;
+      bottom: 0;
+      left: 0;
+      background-color: $primary-color;
+      transition: width .3s ease 0s;
+    }
+    &.active,
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.sectionBanner {
+  margin-bottom: 5rem;
+  @include mobile {
+    margin-bottom: 2.5rem;
+  }
+  .banner {
+    min-height: 296px;
+    width: 50%;
+    transition: all .3s ease 0s;
+    @include mobile {
+      min-height: 136px;
+    }
+    
+  }
+  &.tab-1{
+    .banner-primary {
+      @include backgroundImage ('../images/product-header-1.png', cover);
+      @include ipad {
+        @include backgroundImage ('../images/product-header-sm-1.png', cover);
+      }
+    }
+    .banner-secondary {
+      @include backgroundImage ('../images/product-header-2.png', cover);
+      @include ipad {
+        @include backgroundImage ('../images/product-header-sm-2.png', cover);
+      }
+    }
+  }
+  &.tab-2{
+    .banner-primary {
+      @include backgroundImage ('../images/product-header-3.png', cover);
+      @include ipad {
+        @include backgroundImage ('../images/product-header-sm-3.png', cover);
+      }
+    }
+    .banner-secondary {
+      @include backgroundImage ('../images/product-header-4.png', cover);
+      @include ipad {
+        @include backgroundImage ('../images/product-header-sm-4.png', cover);
+      }
+    }
+  }
+}
+
+.pageTitle {
+  font-size: 2.625rem;
+  font-weight: 500;
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+.pageIntro {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  @include mobile {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.tabContent {
+  display: none;
+  opacity: 0;
+  transition: all .5s ease 0s;
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}

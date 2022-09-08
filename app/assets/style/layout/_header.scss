@@ -1,0 +1,98 @@
+.header {
+  position: relative;
+  background-color: $primary-color;
+  z-index: 9999;
+  .logo {
+    width: 80px;
+    margin: 1rem 0;
+  }
+  .nav {
+    display: flex;
+    @include mobile {
+      position: absolute;
+      flex-direction: column;
+      background-color: #aaaaaa;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      max-height: 0;
+      transition: all .3s ease 0s;
+      overflow: hidden;
+      z-index: 9999;
+    }
+    &.active {
+      @include mobile{
+        max-height: 204px;
+      }
+    }
+    li {
+      @include mobile {
+        margin-right: 0;
+      }
+    }
+    a {
+      display: block;
+      padding: 25px 0;
+      font-size: 1.250rem;
+      color: $normal-color;
+      background-color: transparent;
+      @include mobile {
+        border-top: 1px solid $normal-color;
+        background-color: $primary-color;
+        padding: 10px 0;
+        text-align: center;
+      }
+      &:hover {
+        color: $link-hover-color;
+        @include mobile {
+          background-color: $secondary-color;      
+        }
+      }
+    }
+  }
+  .mobileMenu {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999px;
+    @include mobile {
+      display: block;
+    }
+    span {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 3px;
+      background-color: #ffffff;
+      transform: translate(-50%, -50%);
+      transition: all .3s ease 0s;
+        &::before {
+          @include mobileMenu;
+          top: 10px;
+        }
+        &::after {
+          @include mobileMenu;
+          bottom: 10px;
+        }
+    }
+    &.active {
+      span {
+        background-color: transparent;
+        &::before {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &::after {
+          top: 50%;
+          left: 50%;
+          bottom: inherit;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+.blogItem {
+  margin-bottom: 3.75rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include ipad {
+    margin-bottom: 1.5rem;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+  &>div:first-child {
+    flex: 1;
+    @include ipad {
+      flex: auto;
+      max-width: 336px;
+      width: 100%;
+    }
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: .5rem;
+      max-width: 100%;
+    }
+  }
+  &>div:last-child {
+    max-width: 636px;
+    @include ipad {
+      max-width: 100%;
+      flex: 1;
+    }
+  }
+  .blogHead {
+    margin-bottom: .25rem;
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+  .blogHeadTitle {
+    font-size: 2rem;
+    @include ipad {
+      font-size: 1.5rem;
+    }
+  }
+  .blogBody {
+    color: #555555;
+    @include mobile {
+      display: none;
+    }
+  }
+  .lg{
+    @include ipad {
+      font-size: 1rem;
+    }
+  }
+  a:hover {
+    color: $primary-color;
+  }
+}
+
+.searchBar{
+  background-color: $secondary-color;
+  li {
+    margin-right: 3rem;
+    a {
+      display: block;
+      padding: 13px 0;
+    }
+  }
+  .search {
+    width: 40px;
+    height: 40px;
+    span {
+      font-size: 1.875rem;
+      transition: all .3s ease 0s;
+    }
+    &:hover {
+      span {
+        color: $link-hover-color;
+      }
+    }
+  }
+}
+
+.breadcrumb li{
+  position: relative;
+  margin-right: 1rem;
+  &:before {
+    content:'/';
+    position: absolute;
+    top: 0;
+    right: -12px;
+  }
+  &:last-child:before {
+      content: none;
+    }
+  a {
+    display: block;
+    color: $dark-color;
+    &.active {
+      color: $primary-color;
+    }
+  }
+}
+
+.blogDetails {
+  max-width: 856px;
+  width: 100%;
+  transition: all .3s ease 0s;
+  @include ipad {
+    max-width: 516px;
+  }
+  @include mobile {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.shareLink {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $success-color;
+  @include mobile {
+    display: none;
+  }
+  a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
+
+.aside {
+  @include mobile {
+    display: none;
+  }
+  .tagRow {
+    span {
+      display: inline-block;
+      color: $primary-color;
+      font-size: 1.5rem;
+      font-weight: 700;
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: .25rem;
+    }
+    &:first-child {
+      span {
+        font-size: 2rem;
+        &:not(:last-child) {
+          margin-right: .75rem;
+        }
+      }
+    }
+  }
+}
+
+.bottom_nav {
+  @include mobile {
+    display: none;
+  }
+}

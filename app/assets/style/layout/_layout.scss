@@ -1,0 +1,13 @@
+.layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .85);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 9990;
+  @include customBreakPoint('min-width: 768px') {
+    display: none;
+  }
+}
