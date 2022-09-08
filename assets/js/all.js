@@ -18,10 +18,9 @@ mobileBtn.addEventListener('click', function () {
 // jQuery with CDN
 
 $(document).ready(function () {
-  if ($('.tabMenu a').length > 0) {
-    initTabMenu();
-  }
-
+  // if ($('.tabMenu a').length > 0) {
+  //   initTabMenu()
+  // }
   if ($('.header nav').hasClass('active')) {
     $('.footer').append('<div class="layout"></div>');
   } else {
