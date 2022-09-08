@@ -124,37 +124,41 @@
 }
 
 .col-4 {
-  width: calc(100% + 24px);
+  gap: 5rem 1.5rem;
+  @include ipad {
+    gap: 2.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
   @include mobile {
-    width: 100%;
+    gap: 1.5rem 1.5rem;
   }
   & > * {
-    margin-right: 24px;
-    width: calc((100% - 96px) / 4);
+    width: calc((100% - 4.5rem) / 4);
     @include ipad {
-      width: calc((100% - 48px) / 2);
+      width: calc((100% - 1.5rem) / 2);
     }
     @include mobile {
-      width: 100%;
-      margin-right: 0;
+      width: 100%
     }
   }
 }
 
 .col-3 {
-  width: calc(100% + 24px);
+  gap: 5rem 1.5rem;
+  @include ipad {
+    gap: 2.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
   @include mobile {
-    width: 100%;
+    gap: 1.5rem 1.5rem;
   }
   & > * {
-    margin-right: 24px;
-    width: calc((100% - 72px) / 3);
+    width: calc((100% - 3rem) / 3);
     @include ipad {
-      width: calc((100% - 48px) / 2);
+      width: calc((100% - 1.5rem) / 2);
     }
     @include mobile {
-      width: 100%;
-      margin-right: 0;
+      width: 100%
     }
   }
 }

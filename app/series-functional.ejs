@@ -15,7 +15,7 @@
     <div class="container d-flex justify-content-space-between align-items-center">
       <div class="logo"><a href="./index.html"><img src="./assets/images/logo-white.png" alt="logo"></a></div>
       <ul class="nav">
-        <li class="mr-8"><a href="./series-optical.html">系列鏡框</a></li>
+        <li class="mr-8"><a href="./series.html">系列鏡框</a></li>
         <li class="mr-8"><a href="./shop.html">門市據點</a></li>
         <li class="mr-8"><a href="./blog.html">部落格</a></li>
         <li><a href="./qna.html">常見問題</a></li>
@@ -23,6 +23,20 @@
       <a href="javascript:;" class="mobileMenu"><span>Mobile Menu</span></a>
     </div>
   </header>
+
+  <ul class="tabMenu d-flex">
+    <li><a href="./series-optical.html" class="d-flex justify-content-center align-items-center"
+        data-tab="tab-1">OPTICAL</a></li>
+    <li><a href="./series-sunglass.html" class="d-flex justify-content-center align-items-center" data-tab="tab-2">SUNGLASSES</a>
+    </li>
+    <li><a href="javascript:;" class="active  d-flex justify-content-center align-items-center" data-tab="tab-3">FUNCTIONAL</a>
+    </li>
+  </ul>
+  
+  <div class="d-flex sectionBanner tab-1">
+    <div class="banner banner-primary"></div>
+    <div class="banner banner-secondary"></div>
+  </div>
 
   <%- contents %>
 
@@ -32,7 +46,7 @@
         <div>
           <ul class="nav d-flex">
             <li class="mr-6"><a href="./index.html">首頁</a></li>
-            <li class="mr-6"><a href="./series-optical.html">系列鏡框</a></li>
+            <li class="mr-6"><a href="./series.html">系列鏡框</a></li>
             <li class="mr-6"><a href="./shop.html">門市據點</a></li>
             <li class="mr-6"><a href="./blog.html">部落格</a></li>
             <li><a href="./qna.html">常見問題</a></li>

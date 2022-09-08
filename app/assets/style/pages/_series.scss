@@ -80,7 +80,7 @@
   }
 }
 
-.pageTitle {
+.tabTitle {
   font-size: 2.625rem;
   font-weight: 500;
   @include mobile {
@@ -88,21 +88,11 @@
   }
 }
 
-.pageIntro {
+.tabIntro {
   font-size: 2rem;
   margin-bottom: 2rem;
   @include mobile {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-  }
-}
-
-.tabContent {
-  display: none;
-  opacity: 0;
-  transition: all .5s ease 0s;
-  &.active {
-    display: block;
-    opacity: 1;
   }
 }

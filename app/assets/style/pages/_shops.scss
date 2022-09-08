@@ -1,3 +1,23 @@
+.select__group--shop {
+  label {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: all .3s ease 0s;
+    @include mobile {
+      font-size: 1rem;
+      margin-right: .5rem;
+    }
+  }
+  .local__select {
+    max-width: 304px;
+    @include mobile {
+      max-width: inherit;
+      min-width: inherit;
+      width: 77%;
+    }
+  }
+}
+
 .locationItem {
   display: flex;
   flex-direction: column;
@@ -73,5 +93,12 @@
   }
   @include ipad {
     flex-direction: column;
+  }
+}
+
+.locationItemMap {
+  min-height: 100%;
+  img {
+    min-height: 100%;
   }
 }

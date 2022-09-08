@@ -19,6 +19,7 @@
     transition: all .3s ease 0s;
     @include mobile {
       font-size: 1rem;
+      padding: 0.65rem 0.9rem;
     }
     &:hover {
       background-color: $dark-color;
