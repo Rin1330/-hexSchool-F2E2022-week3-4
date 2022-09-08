@@ -9,24 +9,24 @@
   @include mobile {
     flex-direction: column;
   }
-  &>div:first-child {
-    flex: 1;
-    @include ipad {
-      flex: auto;
-      max-width: 336px;
-      width: 100%;
-    }
+  &>div{
+    flex: 0 1 50%;
+    width: 50%;
+    overflow: hidden;
     @include mobile {
-      margin-right: 0;
+      width: 100%;
       margin-bottom: .5rem;
-      max-width: 100%;
     }
-  }
-  &>div:last-child {
-    max-width: 636px;
-    @include ipad {
-      max-width: 100%;
-      flex: 1;
+    &:first-child {
+      margin-right: 1.5rem;
+      @include mobile {
+
+      }
+    }
+    &:last-child {
+      @include ipad {
+        max-height: 208px;
+      }
     }
   }
   .blogHead {
@@ -59,11 +59,28 @@
 
 .searchBar{
   background-color: $secondary-color;
+  ul {
+    @include mobile {
+      width: 100%;
+      justify-content: center;
+    }
+  }
   li {
     margin-right: 3rem;
+    @include mobile {
+      margin-right: 1rem;
+    }
     a {
       display: block;
       padding: 13px 0;
+      transition: all .3s ease 0s;
+      @include mobile {
+        font-size: 1rem;
+        padding: 12px 0;
+      }
+      &:hover {
+        color: $link-hover-color;
+      }
     }
   }
   .search {
@@ -77,6 +94,9 @@
       span {
         color: $link-hover-color;
       }
+    }
+    @include mobile {
+      display: none;
     }
   }
 }
