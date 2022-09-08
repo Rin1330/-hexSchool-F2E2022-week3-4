@@ -741,9 +741,16 @@ h1 {
 
 h2, .pageTitle {
   font-size: 3rem;
-  position: relative; }
+  position: relative;
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s; }
+  @media (max-width: 991.98px) {
+    h2, .pageTitle {
+      margin-top: 5rem; } }
   @media (max-width: 767.98px) {
     h2, .pageTitle {
+      margin-top: 2.5rem;
       font-size: 1.5rem; } }
   h2.leftLine, .pageTitle.leftLine {
     padding-left: 1rem; }
@@ -1507,30 +1514,21 @@ select {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
-  .blogItem > div:first-child {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1; }
-    @media (max-width: 991.98px) {
-      .blogItem > div:first-child {
-        -webkit-box-flex: 1;
-            -ms-flex: auto;
-                flex: auto;
-        max-width: 336px;
-        width: 100%; } }
+  .blogItem > div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    width: 50%;
+    overflow: hidden; }
     @media (max-width: 767.98px) {
-      .blogItem > div:first-child {
-        margin-right: 0;
-        margin-bottom: .5rem;
-        max-width: 100%; } }
-  .blogItem > div:last-child {
-    max-width: 636px; }
+      .blogItem > div {
+        width: 100%;
+        margin-bottom: .5rem; } }
+    .blogItem > div:first-child {
+      margin-right: 1.5rem; }
     @media (max-width: 991.98px) {
       .blogItem > div:last-child {
-        max-width: 100%;
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1; } }
+        max-height: 208px; } }
   .blogItem .blogHead {
     margin-bottom: .25rem; }
     @media (max-width: 767.98px) {
@@ -1554,11 +1552,29 @@ select {
 
 .searchBar {
   background-color: #650300; }
+  @media (max-width: 767.98px) {
+    .searchBar ul {
+      width: 100%;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
   .searchBar li {
     margin-right: 3rem; }
+    @media (max-width: 767.98px) {
+      .searchBar li {
+        margin-right: 1rem; } }
     .searchBar li a {
       display: block;
-      padding: 13px 0; }
+      padding: 13px 0;
+      -webkit-transition: all .3s ease 0s;
+      -o-transition: all .3s ease 0s;
+      transition: all .3s ease 0s; }
+      @media (max-width: 767.98px) {
+        .searchBar li a {
+          font-size: 1rem;
+          padding: 12px 0; } }
+      .searchBar li a:hover {
+        color: #e3e71b; }
   .searchBar .search {
     width: 40px;
     height: 40px; }
@@ -1569,6 +1585,9 @@ select {
       transition: all .3s ease 0s; }
     .searchBar .search:hover span {
       color: #e3e71b; }
+    @media (max-width: 767.98px) {
+      .searchBar .search {
+        display: none; } }
 
 .breadcrumb li {
   position: relative;
